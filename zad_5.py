@@ -1,5 +1,5 @@
 def check_value_in_list(my_list: list, val: int) -> bool:
-    return my_list.index(val) > 0
+    return val in my_list
 
 
 my_list = list()
@@ -15,3 +15,4 @@ my_list.append(2)
 my_list.append(1)
 
 print(check_value_in_list(my_list, 5))
+print(check_value_in_list(my_list, 11))
