@@ -124,7 +124,7 @@ class Kurs:
 
     @property
     def road_plan(self) -> list:
-        return [ plan for plan in self._road_plan ]
+        return [plan for plan in self._road_plan]
 
     @date_start.setter
     def date_start(self, value: datetime):
@@ -151,7 +151,7 @@ class Kurs:
         self._road_plan.append(value)
 
     def calculate_course_length(self) -> float:
-        return [ round(sum(part.road_length_km()), 2) for part in self._road_plan ]
+        return [round(sum(part.road_length_km()), 2) for part in self._road_plan]
 
     def get_used_car_mark(self) -> str:
         return self._used_car.car_mark()
