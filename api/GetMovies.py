@@ -1,4 +1,3 @@
-import json
 from flask_restful import Resource
 import modules.database as database
 
