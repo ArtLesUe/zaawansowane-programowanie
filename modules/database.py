@@ -1,8 +1,16 @@
+from models.Movie import Movie
+
+
 def read_movies_from_database() -> list():
-    csv = open("database/movies.csv", "r")
+    csv = open(file="database/movies.csv", mode="r", encoding="utf8")
     headers = csv.readline().replace('\n', '').split(",")
+    movies = list()
 
     for line in csv.readlines():
-        print(dict(['a', 'b']))
+        movie = dict()
+        for idx, header in enumerate(headers):
+            movie[header] = line.split(',')[idx]
+        movies.append(Movie(**movie).__dict__)
 
     csv.close()
+    return movies
