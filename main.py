@@ -1,5 +1,6 @@
 import cv2
 import imutils
+import os
 
 
 def detect_persons_in_image(img_path: str) -> None:
@@ -17,4 +18,10 @@ def detect_persons_in_image(img_path: str) -> None:
     cv2.destroyAllWindows()
 
 
-detect_persons_in_image("images/image-1.jpg")
+def find_and_process_images() -> None:
+    filelist = os.listdir('images')
+    for image in filelist:
+        detect_persons_in_image("images/" + image)
+
+
+find_and_process_images()
