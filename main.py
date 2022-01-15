@@ -10,7 +10,7 @@ dieta_3 = Dieta("dieta mięsna", "dziwna", False, False, 5000, 444.22)
 dietetyk_1 = Dietetyk("Andrzej", "Odchudzacz", "ART001", True)
 pacjent_1 = Pacjent("Władysław", "Grubasek", "KLI001", True)
 
-zamowienie_1 = Zamowienie("", "", 0, False, [], "", "")
+zamowienie_1 = Zamowienie("", "", 0, False, [], None, None)
 zamowienie_1.nr_zamowienia = "ZAM001"
 zamowienie_1.data_zamowienia = "2022-01-15"
 zamowienie_1.oplacone = False
